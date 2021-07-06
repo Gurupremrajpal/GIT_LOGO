@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Rancho', cursive;
+		}
+
+		html{
+			font-size: 62.5; /*1ren = 10 px*/
+		}
+
+		.center_div{
+			width: 100vw;
+			height: 100vh;
+			background-color: hsl(206, 21%, 94%);
+			display: grid;
+			place-items: center;
+		}
+
+
+		.logo{
+			width: 15rem; /*15=150px*/
+			height: 15rem;
+			background-color: #f05030;
+			border-radius: 1.5rem; /*1.5=15px*/
+			outline: none;
+			position: relative;
+			transform: rotate(45deg);
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		}
+
+		.line1{
+			width: 11rem;
+			height: 1.2rem;
+			background-color: #fff;
+			position: absolute; /*because logo1 is child class of logo*/
+			top: 3.5rem;
+		}
+
+		.line1::before{
+			content: "";
+			width: 3rem;
+			height: 3rem; /*in sudo elements content width and height is compulsory*/
+			background-color: #fff;
+			position: absolute;
+			border-radius: 50%;
+			top: -1rem;
+			left: 3rem;
+		}
+
+		.line1::after{
+			content: "";
+			width: 3rem;
+			height: 3rem; /*in sudo elements content width and height is compulsory*/
+			background-color: #fff;
+			position: absolute;
+			border-radius: 50%;
+			top: -1rem;
+			right: -1rem;
+		}
+
+		.line2{
+			width: 9rem;
+			height: 1.2rem;
+			background-color: #fff;
+			position: absolute; /*because logo2 is child class of logo*/
+			top: 6.7rem;
+			left: 3rem;
+			transform: rotate(46.5deg);
+		}
+
+		.line2::before{
+			content: "";
+			width: 3rem;
+			height: 3rem; /*in sudo elements content width and height is compulsory*/
+			background-color: #fff;
+			position: absolute;
+			border-radius: 50%;
+			top: -1rem;
+			right: -1rem;
+		}
+
+		.Name{
+			color: black;
+			position: absolute;
+			top: 75%;
+			left: 35%;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="center_div">
+		<div class="logo">
+			<div class="line1"></div>
+			<div class="line2"></div>
+		</div>
+	</div>
+	<div class="Name">
+		<h1> By:- Guruprem Rajpal</h1>
+	</div>
+
+</body>
+</html>
